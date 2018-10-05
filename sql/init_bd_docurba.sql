@@ -20,18 +20,17 @@
 -- ####################################################################################################################################################
 
 DROP SCHEMA IF EXISTS m_urbanisme_doc;
-CREATE SCHEMA m_urbanisme_doc
-  AUTHORIZATION sig_create;
+CREATE SCHEMA m_urbanisme_doc; -- AUTHORIZATION sig_create;
 
-GRANT USAGE ON SCHEMA m_urbanisme_doc TO edit_sig;
-GRANT ALL ON SCHEMA m_urbanisme_doc TO create_sig;
-GRANT USAGE ON SCHEMA m_urbanisme_doc TO read_sig;
-ALTER DEFAULT PRIVILEGES IN SCHEMA m_urbanisme_doc
-GRANT ALL ON TABLES TO create_sig;
-ALTER DEFAULT PRIVILEGES IN SCHEMA m_urbanisme_doc
-GRANT INSERT, SELECT, UPDATE, DELETE ON TABLES TO edit_sig;
-ALTER DEFAULT PRIVILEGES IN SCHEMA m_urbanisme_doc
-GRANT SELECT ON TABLES TO read_sig;
+-- GRANT USAGE ON SCHEMA m_urbanisme_doc TO edit_sig;
+-- GRANT ALL ON SCHEMA m_urbanisme_doc TO create_sig;
+-- GRANT USAGE ON SCHEMA m_urbanisme_doc TO read_sig;
+-- ALTER DEFAULT PRIVILEGES IN SCHEMA m_urbanisme_doc
+-- GRANT ALL ON TABLES TO create_sig;
+-- ALTER DEFAULT PRIVILEGES IN SCHEMA m_urbanisme_doc
+-- GRANT INSERT, SELECT, UPDATE, DELETE ON TABLES TO edit_sig;
+-- ALTER DEFAULT PRIVILEGES IN SCHEMA m_urbanisme_doc
+-- GRANT SELECT ON TABLES TO read_sig;
 
 COMMENT ON SCHEMA m_urbanisme_doc
   IS 'Schéma contenant les données métiers relatives aux documents d''urbanisme pour le modèle CNIG2017';
@@ -57,11 +56,10 @@ CREATE TABLE m_urbanisme_doc.lt_etat
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_etat
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_etat TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_etat TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_etat TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_etat OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_etat TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_etat TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_etat TO edit_sig;
 
 
 COMMENT ON TABLE m_urbanisme_doc.lt_etat
@@ -97,11 +95,10 @@ CREATE TABLE m_urbanisme_doc.lt_typedoc
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_typedoc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_typedoc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_typedoc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typedoc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_typedoc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_typedoc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_typedoc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typedoc TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_typedoc
   IS 'Liste des valeurs de l''attribut typedoc de la donnée doc_urba';
@@ -133,11 +130,10 @@ CREATE TABLE m_urbanisme_doc.lt_typeref
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_typeref
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_typeref TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_typeref TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typeref TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_typeref OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_typeref TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_typeref TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typeref TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_typeref
   IS 'Liste des valeurs de l''attribut typeref de la donnée doc_urba';
@@ -168,11 +164,10 @@ CREATE TABLE m_urbanisme_doc.lt_nomproc
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_nomproc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_nomproc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_nomproc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_nomproc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_nomproc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_nomproc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_nomproc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_nomproc TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_nomproc
   IS 'Liste des valeurs de l''attribut Nom de la procédure de la donnée doc_urba';
@@ -208,11 +203,10 @@ CREATE TABLE m_urbanisme_doc.lt_typezone
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_typezone
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_typezone TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_typezone TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typezone TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_typezone OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_typezone TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_typezone TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typezone TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_typezone
   IS 'Liste des valeurs de l''attribut typezone de la donnée zone_urba';
@@ -243,11 +237,10 @@ CREATE TABLE m_urbanisme_doc.lt_destdomi
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_destdomi
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_destdomi TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_destdomi TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_destdomi TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_destdomi OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_destdomi TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_destdomi TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_destdomi TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_destdomi
   IS 'Liste des valeurs de l''attribut destdomi de la donnée zone_urba';
@@ -286,11 +279,10 @@ CREATE TABLE m_urbanisme_doc.lt_typesect
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_typesect
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_typesect TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_typesect TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typesect TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_typesect OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_typesect TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_typesect TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typesect TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_typesect
   IS 'Liste des valeurs de l''attribut typesect de la donnée zone_urba';
@@ -322,11 +314,10 @@ CREATE TABLE m_urbanisme_doc.lt_libsect
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_libsect
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_libsect TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_libsect TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_libsect TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_libsect OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_libsect TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_libsect TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_libsect TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_libsect
   IS 'Liste des valeurs de l''attribut libelle à saisir pour la carte communale (convention de libellé pour l''affichage cartographique)';
@@ -360,11 +351,10 @@ CREATE TABLE m_urbanisme_doc.lt_typepsc
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_typepsc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_typepsc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_typepsc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typepsc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_typepsc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_typepsc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_typepsc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typepsc TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_typepsc
   IS 'Liste des valeurs de l''attribut typepsc de la donnée prescription_surf, prescription_lin et prescription_pct';
@@ -545,11 +535,10 @@ CREATE TABLE m_urbanisme_doc.lt_typeinf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.lt_typeinf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.lt_typeinf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.lt_typeinf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typeinf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.lt_typeinf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.lt_typeinf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.lt_typeinf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.lt_typeinf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.lt_typeinf
   IS 'Liste des valeurs de l''attribut typeinf de la donnée info_surf, info_lin et info_pct';
@@ -875,11 +864,10 @@ CREATE TABLE m_urbanisme_doc.an_doc_urba
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.an_doc_urba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_doc_urba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_doc_urba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_doc_urba TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_doc_urba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_doc_urba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_doc_urba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_doc_urba TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.an_doc_urba
   IS 'Ensemble des procédures des documents d''urbanisme (y compris les communes en RNU)';
@@ -924,11 +912,10 @@ CREATE TABLE m_urbanisme_doc.an_doc_urba_com
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.an_doc_urba_com
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_doc_urba_com TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_doc_urba_com TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_doc_urba_com TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_doc_urba_com OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_doc_urba_com TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_doc_urba_com TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_doc_urba_com TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.an_doc_urba_com
   IS 'Donnée alphanumerique d''appartenance d''une commune à une procédure définie';
@@ -966,11 +953,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_zone_urba
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_zone_urba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_zone_urba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_zone_urba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_zone_urba TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_zone_urba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_zone_urba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_zone_urba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_zone_urba TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_zone_urba
   IS 'Donnée géographique contenant les zonages des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1027,11 +1013,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_prescription_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_prescription_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_prescription_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_prescription_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_prescription_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_prescription_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_prescription_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_prescription_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_prescription_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_prescription_surf
   IS 'Donnée géographique contenant les prescriptions surfaciques des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -1055,7 +1040,7 @@ COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_surf.l_insee IS 'Code INSEE
 COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_surf.idurba IS 'Identifiant du document d''urbanisme';
 COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_surf.datvalid IS 'Date de validation (aaaammjj)';
 COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_surf.geom IS 'Géométrie de l''objet';
-COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_surf.geom1 IS 'Géométrie de l'objet avec un buffer de -0.5 pour calcul de la vue an_vmr_prescription pour GEO.Champ mis à jour en automatique par un trigger à l'insertion, mise à jour du champ geom';
+COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_surf.geom1 IS 'Géométrie de l''objet avec un buffer de -0.5 pour calcul de la vue an_vmr_prescription pour GEO.Champ mis à jour en automatique par un trigger à l''insertion, mise à jour du champ geom';
 
 -- Function: m_urbanisme_doc.m_geom1_prescription_surf()
 
@@ -1072,11 +1057,10 @@ RETURN NEW;
 END;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION m_urbanisme_doc.m_geom1_prescription_surf()
-  OWNER TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO public;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO create_sig;
+-- ALTER FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() OWNER TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO public;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO create_sig;
 
 
 -- Trigger: t_t1_update_geom on m_urbanisme_doc.geo_p_prescription_surf
@@ -1123,11 +1107,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_prescription_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_prescription_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_prescription_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_prescription_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_prescription_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_prescription_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_prescription_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_prescription_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_prescription_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_prescription_lin
   IS 'Donnée géographique contenant les prescriptions linéaires des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -1151,8 +1134,8 @@ COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_lin.l_insee IS 'Code INSEE'
 COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_lin.idurba IS 'Identifiant du document d''urbanisme';
 COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_lin.datvalid IS 'Date de validation (aaaammjj)';
 COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_lin.geom IS 'Géométrie de l''objet';
-COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_lin.geom1 IS 'Géométrie de l'objet avec un buffer de -0.01 pour calcul de la vue xapps_an_vmr_prescription pour GEO.
-Champ mis à jour en automatique par un trigger à l'insertion, mise à jour du champ geom';
+COMMENT ON COLUMN m_urbanisme_doc.geo_p_prescription_lin.geom1 IS 'Géométrie de l''objet avec un buffer de -0.01 pour calcul de la vue xapps_an_vmr_prescription pour GEO.
+Champ mis à jour en automatique par un trigger à l''insertion, mise à jour du champ geom';
 
 -- Function: m_urbanisme_doc.m_geom1_prescription_surf()
 
@@ -1168,11 +1151,10 @@ RETURN NEW;
 END;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION m_urbanisme_doc.m_geom1_prescription_lin()
-  OWNER TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() TO public;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() TO create_sig;
+-- ALTER FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() OWNER TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() TO public;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_lin() TO create_sig;
 
 
 CREATE TRIGGER t_t1_update_geom
@@ -1215,11 +1197,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_prescription_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_prescription_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_prescription_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_prescription_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_prescription_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_prescription_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_prescription_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_prescription_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_prescription_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_prescription_pct
   IS 'Donnée géographique contenant les prescriptions ponctuelles des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -1277,11 +1258,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_info_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_info_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_info_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_info_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_info_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_info_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_info_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_info_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_info_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_info_surf
   IS 'Donnée géographique contenant les informations surfaciques des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1337,11 +1317,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_info_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_info_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_info_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_info_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_info_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_info_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_info_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_info_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_info_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_info_lin
   IS 'Donnée géographique contenant les informations linéaires des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1398,11 +1377,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_info_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_info_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_info_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_info_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_info_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_info_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_info_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_info_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_info_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_info_pct
   IS 'Donnée géographique contenant les informations ponctuelles des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1447,11 +1425,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_habillage_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_habillage_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_habillage_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_habillage_surf
   IS 'Donnée géographique contenant l''habillage surfacique des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1484,11 +1461,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_habillage_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_habillage_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_habillage_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_habillage_lin
   IS 'Donnée géographique contenant l''habillage linéaire des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1522,11 +1498,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_habillage_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_habillage_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_habillage_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_habillage_pct
   IS 'Donnée géographique contenant l''habillage ponctuel des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1564,11 +1539,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_habillage_txt
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_habillage_txt
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_habillage_txt OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_p_habillage_txt
   IS 'Donnée géographique contenant l''habillage textuel des documents d''urbanisme locaux (PLUi, PLU, POS) sous la forme de ponctuels';
@@ -1615,16 +1589,15 @@ CREATE TABLE m_urbanisme_doc.geo_a_zone_urba
   l_insee character varying(5) NOT NULL, -- Code INSEE
   l_surf_cal numeric, -- Surface calculée de la zone en ha
   l_observ character varying(254), -- Observations
-  geom geometry(MultiPolygon,2154), -- Géométrie de l'objet
+  geom geometry(MultiPolygon,2154) -- Géométrie de l'objet
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_zone_urba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_zone_urba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_zone_urba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_zone_urba TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_zone_urba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_zone_urba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_zone_urba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_zone_urba TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_zone_urba
   IS '(archive) Donnée géographique contenant les zonages des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1675,16 +1648,15 @@ CREATE TABLE m_urbanisme_doc.geo_a_prescription_surf
   l_valrecul character varying(80), -- Valeur de recul
   l_typrecul character varying(80), -- Type de recul
   l_observ character varying(254), -- Observations
-  geom geometry(MultiPolygon,2154), -- Géométrie de l'objet
+  geom geometry(MultiPolygon,2154) -- Géométrie de l'objet
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_prescription_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_prescription_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_prescription_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_prescription_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_prescription_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_prescription_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_prescription_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_prescription_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_prescription_surf
   IS '(archive) Donnée géographique contenant les prescriptions surfaciques des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -1743,11 +1715,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_prescription_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_prescription_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_prescription_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_prescription_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_prescription_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_prescription_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_prescription_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_prescription_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_prescription_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_prescription_lin
   IS '(archive) Donnée géographique contenant les prescriptions linéaires des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -1805,11 +1776,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_prescription_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_prescription_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_prescription_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_prescription_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_prescription_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_prescription_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_prescription_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_prescription_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_prescription_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_prescription_pct
   IS '(archive) Donnée géographique contenant les prescriptions ponctuelles des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -1861,16 +1831,15 @@ CREATE TABLE m_urbanisme_doc.geo_a_info_surf
   l_valrecul character varying(80), -- Valeur de recul
   l_typrecul character varying(80), -- Type de recul
   l_observ character varying(254), -- Observations
-  geom geometry(MultiPolygon,2154), -- Géométrie de l'objet
+  geom geometry(MultiPolygon,2154) -- Géométrie de l'objet
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_info_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_info_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_info_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_info_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_info_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_info_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_info_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_info_surf TO edit_sig;
 									      
 -- COMMENT GB : -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Laisser également en commentaire les lignes affectant des droits au groupe_sig si ce groupe n'existe pas dans vos structures et ajouter éventuellement les droits de vos groupes
@@ -1930,11 +1899,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_info_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_info_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_info_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_info_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_info_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_info_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_info_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_info_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_info_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_info_lin
   IS '(archive) Donnée géographique contenant les informations linéaires des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -1990,11 +1958,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_info_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_info_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_info_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_info_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_info_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_info_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_info_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_info_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_info_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_info_pct
   IS '(archive) Donnée géographique contenant les informations ponctuelles des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2038,11 +2005,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_habillage_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_habillage_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_habillage_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_habillage_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_habillage_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_habillage_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_habillage_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_habillage_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_habillage_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_habillage_surf
   IS '(archive) Donnée géographique contenant l''habillage surfacique des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2074,11 +2040,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_habillage_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_habillage_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_habillage_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_habillage_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_habillage_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_habillage_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_habillage_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_habillage_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_habillage_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_habillage_lin
   IS '(archive) Donnée géographique contenant l''habillage linéaire des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2111,11 +2076,10 @@ CREATE TABLE m_urbanisme_doc.geo_a_habillage_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_a_habillage_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_a_habillage_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_habillage_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_habillage_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_a_habillage_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_a_habillage_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_a_habillage_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_a_habillage_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_habillage_pct
   IS '(archive) Donnée géographique contenant l''habillage ponctuel des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2147,16 +2111,15 @@ CREATE TABLE m_urbanisme_doc.geo_a_habillage_txt
   idurba character varying(30) NOT NULL, -- Identifiant du document d''urbanisme
   l_insee character varying(5) NOT NULL, -- Code INSEE 
   l_couleur character varying(7), -- Couleur de l'élément graphique, sous forme HEXA (#000000)
-  geom geometry(MultiPoint,2154), -- Géométrie de l'objet
+  geom geometry(MultiPoint,2154) -- Géométrie de l'objet
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_habillage_txt
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_habillage_txt OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_habillage_txt TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_a_habillage_txt
   IS '(archive) Donnée géographique contenant l''habillage textuel des documents d''urbanisme locaux (PLUi, PLU, POS) sous la forme de ponctuels';
@@ -2209,11 +2172,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_zone_urba
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_zone_urba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_zone_urba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_zone_urba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_zone_urba TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_zone_urba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_zone_urba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_zone_urba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_zone_urba TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_zone_urba
   IS '(test) Donnée géographique contenant les zonages des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2269,11 +2231,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_prescription_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_prescription_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_prescription_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_prescription_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_prescription_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_prescription_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_prescription_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_prescription_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_prescription_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_prescription_surf
   IS '(test) Donnée géographique contenant les prescriptions surfaciques des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -2332,11 +2293,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_prescription_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_prescription_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_prescription_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_prescription_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_prescription_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_prescription_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_prescription_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_prescription_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_prescription_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_prescription_lin
   IS '(test) Donnée géographique contenant les prescriptions linéaires des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -2395,11 +2355,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_prescription_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_prescription_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_prescription_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_prescription_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_prescription_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_prescription_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_prescription_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_prescription_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_prescription_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_prescription_pct
   IS '(test) Donnée géographique contenant les prescriptions ponctuelles des documents d''urbanisme locaux (PLUi, PLU, POS, CC)';
@@ -2457,11 +2416,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_info_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_info_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_info_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_info_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_info_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_info_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_info_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_info_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_info_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_info_surf
   IS 'test) Donnée géographique contenant les informations surfaciques des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2517,11 +2475,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_info_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_info_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_info_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_info_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_info_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_info_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_info_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_info_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_info_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_info_lin
   IS '(test) Donnée géographique contenant les informations linéaires des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2578,11 +2535,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_info_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_info_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_info_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_info_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_info_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_info_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_info_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_info_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_info_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_info_pct
   IS '(test) Donnée géographique contenant les informations ponctuelles des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2627,11 +2583,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_habillage_surf
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_habillage_surf
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_surf TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_surf TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_surf TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_habillage_surf OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_surf TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_surf TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_surf TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_habillage_surf
   IS '(test) Donnée géographique contenant l''habillage surfacique des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2664,11 +2619,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_habillage_lin
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_habillage_lin
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_lin TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_lin TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_lin TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_habillage_lin OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_lin TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_lin TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_lin TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_habillage_lin
   IS '(test) Donnée géographique contenant l''habillage linéaire des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2702,11 +2656,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_habillage_pct
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_habillage_pct
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_pct TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_pct TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_pct TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_habillage_pct OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_pct TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_pct TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_pct TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_habillage_pct
   IS '(test) Donnée géographique contenant l''habillage ponctuel des documents d''urbanisme locaux (PLUi, PLU, POS)';
@@ -2744,11 +2697,10 @@ CREATE TABLE m_urbanisme_doc.geo_t_habillage_txt
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_t_habillage_txt
-  OWNER TO gsig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_txt TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_txt TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_txt TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_t_habillage_txt OWNER TO gsig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_t_habillage_txt TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_t_habillage_txt TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_t_habillage_txt TO edit_sig;
 
 COMMENT ON TABLE m_urbanisme_doc.geo_t_habillage_txt
   IS '(test) Donnée géographique contenant l''habillage textuel des documents d''urbanisme locaux (PLUi, PLU, POS) sous la forme de ponctuels';
@@ -2790,11 +2742,10 @@ CREATE TABLE m_urbanisme_doc.an_ads_commune
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.an_ads_commune
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_ads_commune TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_ads_commune TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_ads_commune TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_ads_commune OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_ads_commune TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_ads_commune TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_ads_commune TO edit_sig;
 									      
 COMMENT ON TABLE m_urbanisme_doc.an_ads_commune
   IS 'Donnée source sur l''état de l''ADS ARC sur les communes';
@@ -2818,10 +2769,9 @@ CREATE SEQUENCE m_urbanisme_doc.idpau_seq
   MAXVALUE 99999999999999999
   START 1
   CACHE 1;
-ALTER TABLE m_urbanisme_doc.idpau_seq
-  OWNER TO sig_create;
-GRANT ALL ON SEQUENCE m_urbanisme_doc.idpau_seq TO sig_create;
-GRANT SELECT, USAGE ON SEQUENCE m_urbanisme_doc.idpau_seq TO public;
+-- ALTER TABLE m_urbanisme_doc.idpau_seq OWNER TO sig_create;
+-- GRANT ALL ON SEQUENCE m_urbanisme_doc.idpau_seq TO sig_create;
+-- GRANT SELECT, USAGE ON SEQUENCE m_urbanisme_doc.idpau_seq TO public;
 
 
 
@@ -2851,11 +2801,10 @@ CREATE TABLE m_urbanisme_doc.geo_p_zone_pau
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE m_urbanisme_doc.geo_p_zone_pau
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_p_zone_pau TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_zone_pau TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_zone_pau TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_p_zone_pau OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_p_zone_pau TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_p_zone_pau TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_p_zone_pau TO edit_sig;
 									      
 COMMENT ON TABLE m_urbanisme_doc.geo_p_zone_pau
   IS 'Table géométriquer contenant la délimitation des PAU (partie à urbaniser) dans le cadre d''une commune en RNU';
@@ -3369,11 +3318,10 @@ RETURN NEW;
 END;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION m_urbanisme_doc.an_doc_urba_null()
-  OWNER TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.an_doc_urba_null() TO public;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.an_doc_urba_null() TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.an_doc_urba_null() TO create_sig;
+-- ALTER FUNCTION m_urbanisme_doc.an_doc_urba_null() OWNER TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.an_doc_urba_null() TO public;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.an_doc_urba_null() TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.an_doc_urba_null() TO create_sig;
 
 COMMENT ON FUNCTION m_urbanisme_doc.an_doc_urba_null() IS 'Fonction remplaçant les '' par null lors de la mise à jour ou de l''insertion via le module web de gestion PNR/OLV';
 
@@ -3404,11 +3352,10 @@ RETURN NEW;
 END;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION m_urbanisme_doc.m_geom1_prescription_surf()
-  OWNER TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO public;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO create_sig;
+-- ALTER FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() OWNER TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO public;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_prescription_surf() TO create_sig;
 
 
 -- Trigger: update_geom on m_urbanisme_doc.geo_p_prescription_surf
@@ -3437,11 +3384,10 @@ RETURN NEW;
 END;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION m_urbanisme_doc.m_geom1_information_surf()
-  OWNER TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_information_surf() TO public;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_information_surf() TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_information_surf() TO create_sig;
+-- ALTER FUNCTION m_urbanisme_doc.m_geom1_information_surf() OWNER TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_information_surf() TO public;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_information_surf() TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_geom1_information_surf() TO create_sig;
 
 
 -- Trigger: update_geom on m_urbanisme_doc.geo_p_info_surf
@@ -3469,11 +3415,10 @@ RETURN NEW;
 END;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION m_urbanisme_doc.m_l_surf_cal_ha()
-  OWNER TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() TO public;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() TO sig_create;
-GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() TO create_sig;
+-- ALTER FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() OWNER TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() TO public;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() TO sig_create;
+-- GRANT EXECUTE ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() TO create_sig;
 								       
 COMMENT ON FUNCTION m_urbanisme_doc.m_l_surf_cal_ha() IS 'Fonction dont l''objet est de mettre à jour la superficie calculée en ha du champ l_surf_cal des zones urba';
 
@@ -3563,11 +3508,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.an_v_docurba_arcba AS
   AND geo_vm_osm_epci.cepci::text = '200067965'::text
   ORDER BY an_doc_urba.idurba;
 
-ALTER TABLE m_urbanisme_doc.an_v_docurba_arcba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_arcba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_arcba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_arcba TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_v_docurba_arcba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_arcba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_arcba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_arcba TO edit_sig;
 								       
 COMMENT ON VIEW m_urbanisme_doc.an_v_docurba_arcba
   IS 'Vue ARC simplifiée de la table an_doc_urba à usage interne.
@@ -3594,11 +3538,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.an_v_docurba_cclo AS
   WHERE lt_etat.code = an_doc_urba.etat AND lt_nomproc.code = an_doc_urba.nomproc AND "substring"(an_doc_urba.idurba::text, 1, 5) = geo_osm_commune.insee::text AND st_intersects(st_centroid(geo_osm_commune.geom), geo_vm_osm_epci.geom) AND geo_vm_osm_epci.cepci::text = '246000749'::text
   ORDER BY an_doc_urba.idurba;
 
-ALTER TABLE m_urbanisme_doc.an_v_docurba_cclo
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_cclo TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_cclo TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_cclo TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_v_docurba_cclo OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_cclo TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_cclo TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_cclo TO edit_sig;
 								       
 COMMENT ON VIEW m_urbanisme_doc.an_v_docurba_cclo
   IS 'Vue CCLO simplifiée de la table an_doc_urba à usage interne.
@@ -3626,11 +3569,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.an_v_docurba_ccpe AS
   WHERE lt_etat.code = an_doc_urba.etat AND lt_nomproc.code = an_doc_urba.nomproc AND "substring"(an_doc_urba.idurba::text, 1, 5) = geo_osm_commune.insee::text AND st_intersects(st_centroid(geo_osm_commune.geom), geo_vm_osm_epci.geom) AND geo_vm_osm_epci.cepci::text = '246000897'::text
   ORDER BY an_doc_urba.idurba;
 
-ALTER TABLE m_urbanisme_doc.an_v_docurba_ccpe
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_ccpe TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_ccpe TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_ccpe TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_v_docurba_ccpe OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_ccpe TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_ccpe TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_ccpe TO edit_sig;
 								       
 COMMENT ON VIEW m_urbanisme_doc.an_v_docurba_ccpe
   IS 'Vue CCPE simplifiée de la table an_doc_urba à usage interne.
@@ -3651,11 +3593,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.an_v_docurba_valide AS
   WHERE an_doc_urba.nomproc=lt_nomproc.code AND an_doc_urba.etat = '03'::bpchar
   ORDER BY "substring"(an_doc_urba.idurba::text, 1, 5);
 
-ALTER TABLE m_urbanisme_doc.an_v_docurba_valide
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_valide TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_valide TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_valide TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.an_v_docurba_valide OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.an_v_docurba_valide TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.an_v_docurba_valide TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.an_v_docurba_valide TO edit_sig;
 								       
 COMMENT ON VIEW m_urbanisme_doc.an_v_docurba_valide
   IS 'Liste des documents d''urbanisme valide sur les communes du Pays Compiégnois';
@@ -4022,11 +3963,10 @@ CREATE MATERIALIZED VIEW x_apps.xapps_an_vmr_p_information AS
    FROM r_p
 WITH DATA;
 
-ALTER TABLE x_apps.xapps_an_vmr_p_information
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information TO edit_sig;
+-- ALTER TABLE x_apps.xapps_an_vmr_p_information OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information TO edit_sig;
 
 COMMENT ON MATERIALIZED VIEW x_apps.xapps_an_vmr_p_information
   IS E'Vue matérialisée formatant les données les données informations jugées utiles pour la fiche de renseignements d''urbanisme (fiche d''information de GEO).
@@ -4079,11 +4019,10 @@ CREATE MATERIALIZED VIEW x_apps.xapps_an_vmr_p_information_dpu AS
    FROM r_p
 WITH DATA;
 
-ALTER TABLE x_apps.xapps_an_vmr_p_information_dpu
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information_dpu TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information_dpu TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information_dpu TO edit_sig;
+-- ALTER TABLE x_apps.xapps_an_vmr_p_information_dpu OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information_dpu TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information_dpu TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_p_information_dpu TO edit_sig;
 
 COMMENT ON MATERIALIZED VIEW x_apps.xapps_an_vmr_p_information_dpu
   IS E'Vue matérialisée formatant les données les données des DPU pour la fiche de renseignements d''''urbanisme (fiche d''''information de GEO).
@@ -4240,11 +4179,10 @@ CREATE MATERIALIZED VIEW x_apps.xapps_an_vmr_p_prescription AS
    FROM r_p
 WITH DATA;
 
-ALTER TABLE x_apps.xapps_an_vmr_p_prescription
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_p_prescription TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_p_prescription TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_p_prescription TO edit_sig;
+-- ALTER TABLE x_apps.xapps_an_vmr_p_prescription OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_p_prescription TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_p_prescription TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_p_prescription TO edit_sig;
 
 COMMENT ON MATERIALIZED VIEW x_apps.xapps_an_vmr_p_prescription
   IS E'Vue matérialisée formatant les données les données des prescriptions pour la fiche de renseignements d''urbanisme (fiche d''information de GEO).
@@ -4345,11 +4283,10 @@ CREATE MATERIALIZED VIEW x_apps.xapps_an_vmr_parcelle_plu AS
   GROUP BY '60'::text || req_par.idu, '60'::text || "substring"(req_par.idu, 1, 3), req_plu.insee, req_plu.commune, req_plu.libelle, req_plu.libelong, req_plu.type_zone, req_plu.destdomi_lib, req_plu.fermreco, req_plu.l_observ, req_plu.datappro, req_plu.urlfic
 WITH DATA;
 
-ALTER TABLE x_apps.xapps_an_vmr_parcelle_plu
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_parcelle_plu TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_parcelle_plu TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_parcelle_plu TO edit_sig;
+-- ALTER TABLE x_apps.xapps_an_vmr_parcelle_plu OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.xapps_an_vmr_parcelle_plu TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.xapps_an_vmr_parcelle_plu TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_an_vmr_parcelle_plu TO edit_sig;
 										  
 COMMENT ON MATERIALIZED VIEW x_apps.xapps_an_vmr_parcelle_plu
   IS E'Vue matérialisée contenant les informations pré-formatés pour la constitution de la fiche d''information Renseignements d''urbanisme y compris version imprimable dans GEO.
@@ -4381,11 +4318,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_docurba AS
   WHERE a.insee::text = c.insee::text AND "substring"(u.idurba::text, 1, 5) = c.insee::text AND (a.epci::text = '200067965'::text OR a.epci::text = '246000897'::text OR a.epci::text = '246000749'::text) AND u.etat = '03'::bpchar
   ORDER BY a.libgeo;
 
-ALTER TABLE m_urbanisme_doc.geo_v_docurba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_docurba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_docurba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_docurba TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_docurba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_docurba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_docurba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_docurba TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_docurba
   IS 'Vue géographique présentant le types de document d''urbanisme valide par commune du Pays COmpiégnois';
@@ -4411,11 +4347,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_habillage_surf_arc AS
   OR geo_p_habillage_surf.l_insee::text = '60067'::text OR geo_p_habillage_surf.l_insee::text = '60068'::text OR geo_p_habillage_surf.l_insee::text = '60447'::text OR geo_p_habillage_surf.l_insee::text = '60578'::text 
   OR geo_p_habillage_surf.l_insee::text = '60600'::text OR geo_p_habillage_surf.l_insee::text = '60667'::text;
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_surf_arc TO edit_sig;
 										       
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_p_habillage_surf_arc
   IS 'Vue géographique des habillages surfaciques PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4441,11 +4376,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_habillage_pct_arc AS
   OR geo_p_habillage_pct.l_insee::text = '60067'::text OR geo_p_habillage_pct.l_insee::text = '60068'::text OR geo_p_habillage_pct.l_insee::text = '60447'::text OR geo_p_habillage_pct.l_insee::text = '60578'::text 
   OR geo_p_habillage_pct.l_insee::text = '60600'::text OR geo_p_habillage_pct.l_insee::text = '60667'::text;
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_pct_arc TO edit_sig;
 										       
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_habillage_surf_arc
   IS 'Vue géographique des habillages ponctuels PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4470,11 +4404,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_habillage_lin_arc AS
   OR geo_p_habillage_lin.l_insee::text = '60067'::text OR geo_p_habillage_lin.l_insee::text = '60068'::text OR geo_p_habillage_lin.l_insee::text = '60447'::text OR geo_p_habillage_lin.l_insee::text = '60578'::text 
   OR geo_p_habillage_lin.l_insee::text = '60600'::text OR geo_p_habillage_lin.l_insee::text = '60667'::text;
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_lin_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_habillage_lin_arc
   IS 'Vue géographique des habillages linéaires PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4506,11 +4439,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_habillage_txt_arc AS
   OR geo_p_habillage_txt.l_insee::text = '60067'::text OR geo_p_habillage_txt.l_insee::text = '60068'::text OR geo_p_habillage_txt.l_insee::text = '60447'::text OR geo_p_habillage_txt.l_insee::text = '60578'::text 
   OR geo_p_habillage_txt.l_insee::text = '60600'::text OR geo_p_habillage_txt.l_insee::text = '60667'::text;
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_habillage_txt_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_habillage_txt_arc
   IS 'Vue géographique des habillages textuels PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4550,11 +4482,11 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_info_pct_arc AS
   OR geo_p_info_pct.l_insee::text = '60067'::text OR geo_p_info_pct.l_insee::text = '60068'::text OR geo_p_info_pct.l_insee::text = '60447'::text OR geo_p_info_pct.l_insee::text = '60578'::text 
   OR geo_p_info_pct.l_insee::text = '60600'::text OR geo_p_info_pct.l_insee::text = '60667'::text);
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_info_pct_arc
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_info_pct_arc
 OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_info_pct_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_info_pct_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_info_pct_arc TO edit_sig;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_info_pct_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_info_pct_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_info_pct_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_info_pct_arc
   IS 'Vue géographique des informations ponctuelles PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4592,11 +4524,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_info_lin_arc AS
   OR geo_p_info_lin.l_insee::text = '60067'::text OR geo_p_info_lin.l_insee::text = '60068'::text OR geo_p_info_lin.l_insee::text = '60447'::text OR geo_p_info_lin.l_insee::text = '60578'::text 
   OR geo_p_info_lin.l_insee::text = '60600'::text OR geo_p_info_lin.l_insee::text = '60667'::text);
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_info_lin_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_info_lin_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_info_lin_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_info_lin_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_info_lin_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_info_lin_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_info_lin_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_info_lin_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_info_lin_arc
   IS 'Vue géographique des informations linéaires PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4635,11 +4566,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_info_surf_arc AS
   OR geo_p_info_surf.l_insee::text = '60067'::text OR geo_p_info_surf.l_insee::text = '60068'::text OR geo_p_info_surf.l_insee::text = '60447'::text OR geo_p_info_surf.l_insee::text = '60578'::text 
   OR geo_p_info_surf.l_insee::text = '60600'::text OR geo_p_info_surf.l_insee::text = '60667'::text);
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_info_surf_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_info_surf_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_info_surf_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_info_surf_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_info_surf_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_info_surf_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_info_surf_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_info_surf_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_info_surf_arc
   IS 'Vue géographique des informations surfaciques PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4678,11 +4608,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_p_prescription_lin_arc AS
    OR geo_p_prescription_lin.l_insee::text = '60067'::text OR geo_p_prescription_lin.l_insee::text = '60068'::text OR geo_p_prescription_lin.l_insee::text = '60447'::text OR geo_p_prescription_lin.l_insee::text = '60578'::text 
    OR geo_p_prescription_lin.l_insee::text = '60600'::text OR geo_p_prescription_lin.l_insee::text = '60667'::text);
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_prescription_lin_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_prescription_lin_arc
   IS 'Vue géographique des prescriptions linéaires PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4722,11 +4651,10 @@ OR geo_p_prescription_pct.l_insee::text = '60579'::text OR geo_p_prescription_pc
 OR geo_p_prescription_pct.l_insee::text = '60067'::text OR geo_p_prescription_pct.l_insee::text = '60068'::text OR geo_p_prescription_pct.l_insee::text = '60447'::text OR geo_p_prescription_pct.l_insee::text = '60578'::text 
 OR geo_p_prescription_pct.l_insee::text = '60600'::text OR geo_p_prescription_pct.l_insee::text = '60667'::text);
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_prescription_pct_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_prescription_pct_arc
   IS 'Vue géographique des prescriptions ponctuelles PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4766,11 +4694,10 @@ OR geo_p_prescription_surf.l_insee::text = '60579'::text OR geo_p_prescription_s
 OR geo_p_prescription_surf.l_insee::text = '60067'::text OR geo_p_prescription_surf.l_insee::text = '60068'::text OR geo_p_prescription_surf.l_insee::text = '60447'::text OR geo_p_prescription_surf.l_insee::text = '60578'::text 
 OR geo_p_prescription_surf.l_insee::text = '60600'::text OR geo_p_prescription_surf.l_insee::text = '60667'::text);
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_prescription_surf_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_prescription_surf_arc
   IS 'Vue géographique des prescriptions surfaciques PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4805,11 +4732,10 @@ OR geo_p_zone_urba.l_insee::text = '60579'::text OR geo_p_zone_urba.l_insee::tex
 OR geo_p_zone_urba.l_insee::text = '60067'::text OR geo_p_zone_urba.l_insee::text = '60068'::text OR geo_p_zone_urba.l_insee::text = '60447'::text OR geo_p_zone_urba.l_insee::text = '60578'::text 
 OR geo_p_zone_urba.l_insee::text = '60600'::text OR geo_p_zone_urba.l_insee::text = '60667'::text;
 
-ALTER TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_p_zone_urba_arc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_p_zone_urba_arc
   IS 'Vue géographique des zonages PLU filtrée sur les communes de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée notamment dans l''application PLU Interactif';
@@ -4830,11 +4756,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc.geo_v_urbreg_ads_commune AS
      JOIN m_urbanisme_doc.an_ads_commune a ON a.insee = c.insee::bpchar
   ORDER BY a.insee;
 
-ALTER TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.geo_v_urbreg_ads_commune TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc.geo_v_urbreg_ads_commune
   IS 'Vue géographique sur l''état de l''ADS par l''ARC sur les communes du pays compiégnois';
@@ -4863,11 +4788,10 @@ CREATE MATERIALIZED VIEW x_apps.xapps_geo_vmr_p_zone_urba AS
    FROM m_urbanisme_doc.geo_p_zone_urba
 WITH DATA;
 
-ALTER TABLE x_apps.xapps_geo_vmr_p_zone_urba
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc.xapps_geo_vmr_p_zone_urba TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc.xapps_geo_vmr_p_zone_urba TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_geo_vmr_p_zone_urba TO edit_sig;
+-- ALTER TABLE x_apps.xapps_geo_vmr_p_zone_urba OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc.xapps_geo_vmr_p_zone_urba TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc.xapps_geo_vmr_p_zone_urba TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc.xapps_geo_vmr_p_zone_urba TO edit_sig;
 										  
 COMMENT ON MATERIALIZED VIEW x_apps.xapps_geo_vmr_p_zone_urba
   IS 'Vue matérialisée des zones du PLU servant dans les recherches par zonage ou type dans GEO.';
@@ -4930,11 +4854,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc A
    FROM m_urbanisme_doc_cnig2017.geo_p_habillage_surf
   WHERE idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc TO edit_sig;
 										       
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_surf_pluiarc
   IS 'Vue géographique des habillages surfaciques PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -4955,11 +4878,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_habillage_pct
   WHERE idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc TO edit_sig;
 										       
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_pct_pluiarc
   IS 'Vue géographique des habillages ponctuels PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -4980,11 +4902,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_habillage_lin
   WHERE idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_lin_pluiarc
   IS 'Vue géographique des habillages linéaires en mode test du PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5011,11 +4932,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_habillage_txt
   WHERE idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_habillage_txt_pluiarc
   IS 'Vue géographique des habillages textuels en mode test du PLUi pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5049,11 +4969,11 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_info_pct, m_urbanisme_doc_cnig2017.lt_typeinf
   WHERE geo_p_info_pct.typeinf || geo_p_info_pct.stypeinf = lt_typeinf.code || lt_typeinf.sous_code AND idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc
 OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc TO edit_sig;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_info_pct_pluiarc
   IS 'Vue géographique des informations ponctuelles en mode test du PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5086,11 +5006,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_info_lin, m_urbanisme_doc_cnig2017.lt_typeinf
   WHERE geo_p_info_lin.typeinf || geo_p_info_lin.stypeinf = lt_typeinf.code || lt_typeinf.sous_code and idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_info_lin_pluiarc
   IS 'Vue géographique des informations linéaires mode test du PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5124,11 +5043,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_info_surf, m_urbanisme_doc_cnig2017.lt_typeinf
   WHERE geo_p_info_surf.typeinf || geo_p_info_surf.stypeinf = lt_typeinf.code || lt_typeinf.sous_code and idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_info_surf_pluiarc
   IS 'Vue géographique des informations surfaciques en mode test du PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5162,11 +5080,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc
    FROM m_urbanisme_doc_cnig2017.geo_p_prescription_lin, m_urbanisme_doc_cnig2017.lt_typepsc
   WHERE  geo_p_prescription_lin.typepsc || geo_p_prescription_lin.stypepsc = lt_typepsc.code || lt_typepsc.sous_code and idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_prescription_lin_pluiarc
   IS 'Vue géographique des prescriptions linéaires en mode test du PLUi l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5201,11 +5118,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc
    FROM m_urbanisme_doc_cnig2017.geo_p_prescription_pct, m_urbanisme_doc_cnig2017.lt_typepsc
   WHERE geo_p_prescription_pct.typepsc || geo_p_prescription_pct.stypepsc = lt_typepsc.code || lt_typepsc.sous_code and idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_prescription_pct_pluiarc
   IS 'Vue géographique des prescriptions ponctuelles en mode test du PLUide l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5240,11 +5156,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiar
    FROM m_urbanisme_doc_cnig2017.geo_p_prescription_surf, m_urbanisme_doc_cnig2017.lt_typepsc
   WHERE geo_p_prescription_surf.typepsc || geo_p_prescription_surf.stypepsc = lt_typepsc.code || lt_typepsc.sous_code and idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_prescription_surf_pluiarc
   IS 'Vue géographique des prescriptions surfaciques en mode test du PLUi de l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5274,11 +5189,10 @@ CREATE OR REPLACE VIEW m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc AS
    FROM m_urbanisme_doc_cnig2017.geo_p_zone_urba
   WHERE idurba = '200067965_PLUI_99999999';
 
-ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc
-  OWNER TO sig_create;
-GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc TO sig_create;
-GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc TO read_sig;
-GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc TO edit_sig;
+-- ALTER TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc OWNER TO sig_create;
+-- GRANT ALL ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc TO sig_create;
+-- GRANT SELECT ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc TO read_sig;
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc TO edit_sig;
 										  
 COMMENT ON VIEW m_urbanisme_doc_cnig2017.geo_v_t_zone_urba_pluiarc
   IS 'Vue géographique des zonages PLUi en mode test sur l''ARC pour la création du flux GeoServer DocUrba_ARC utilisée dans l''application PLUi';
@@ -5366,15 +5280,14 @@ AS
   GROUP BY p.idurba, an_geo.libgeo, c.geom
 WITH DATA;
 
-ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic
-    OWNER TO sig_create;
+-- ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublicOWNER TO sig_create;
 
 COMMENT ON MATERIALIZED VIEW x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic
     IS 'Vue matérialisée contenant les informations de niveau 0 à la commune pour l''application PLU Interactif (téléchargement direct des documents à la commune)';
 
-GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic TO edit_sig;
-GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic TO create_sig;
-GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic TO read_sig;
+-- GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic TO edit_sig;
+-- GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic TO create_sig;
+-- GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu0_gdpublic TO read_sig;
 
 -- View: x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic
 
@@ -5452,15 +5365,14 @@ AS
      LEFT JOIN req_zac ON req_par.parcelle = req_zac.idu::text
 WITH DATA;
 
-ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic
-    OWNER TO sig_create;
+-- ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublicOWNER TO sig_create;
 
 COMMENT ON MATERIALIZED VIEW x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic
     IS 'Vue matérialisée contenant les informations de niveau 1 pour l''application PLU Interactif (type de document et zonage)';
 
-GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic TO edit_sig;
-GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic TO create_sig;
-GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic TO read_sig;
+-- GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic TO edit_sig;
+-- GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic TO create_sig;
+-- GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu1_gdpublic TO read_sig;
 
 -- View: x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic
 
@@ -5626,15 +5538,14 @@ AS
    FROM r_p
 WITH DATA;
 
-ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic
-    OWNER TO sig_create;
+-- ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublicOWNER TO sig_create;
 
 COMMENT ON MATERIALIZED VIEW x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic
     IS 'Vue matérialisée contenant les informations de niveau 2 pour l''application PLU Interactif (prescriptions)';
 
-GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic TO edit_sig;
-GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic TO create_sig;
-GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic TO read_sig;
+-- GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic TO edit_sig;
+-- GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic TO create_sig;
+-- GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu2_gdpublic TO read_sig;
 
 -- View: x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic
 
@@ -5678,15 +5589,14 @@ AS
    FROM r_p
 WITH DATA;
 
-ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic
-    OWNER TO sig_create;
+-- ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublicOWNER TO sig_create;
 
 COMMENT ON MATERIALIZED VIEW x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic
     IS 'Vue matérialisée contenant les informations de niveau 3 pour l''application PLU Interactif (droit de préemption)';
 
-GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic TO edit_sig;
-GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic TO create_sig;
-GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic TO read_sig;
+-- GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic TO edit_sig;
+-- GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic TO create_sig;
+-- GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu3_gdpublic TO read_sig;
 
 -- View: x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic
 
@@ -5733,15 +5643,14 @@ AS
   ORDER BY s.idu
 WITH DATA;
 
-ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic
-    OWNER TO sig_create;
+-- ALTER TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublicOWNER TO sig_create;
 
 COMMENT ON MATERIALIZED VIEW x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic
     IS 'Vue matérialisée contenant les informations de niveau 4 pour l''application PLU Interactif (SUP)';
 
-GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic TO edit_sig;
-GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic TO create_sig;
-GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic TO read_sig;
+-- GRANT DELETE, UPDATE, SELECT, INSERT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic TO edit_sig;
+-- GRANT ALL ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic TO create_sig;
+-- GRANT SELECT ON TABLE x_apps_public.xappspublic_an_vmr_fichegeo_ruplu4_gdpublic TO read_sig;
 
 -- ####################################################################################################################################################
 -- ###                                                                                                                                              ###
